@@ -3,11 +3,11 @@
 
 <div>&nbsp;</div>
 
-Quill-Bot is a JavaScript program designed to automatically complete Quill assignments.  It works by monkey patching the `fetch` method to hook any `GET` requests made for question answers and inserting the returned optimal answer into the submissions textbox.
+Quill-Bot is a JavaScript program designed to automatically answer Quill assignments.  It is only designed to work with simple sentence writing prompts.
 
 ## Usage
 
-Quill-Bot only works before the question is posted, so it is recommended that you refresh your browser before proceeding if a question is loaded (you should be in the instructions page of the quill).  Another issue is that the "Get Feedback" button element will be grayed out after an answer is submitted; however, you can still press it as normal, and it should work.
+Quill-Bot only works before the question is loaded, so it is recommended that you refresh your browser before proceeding if a question is loaded (you should be in the instructions page of the assignment).  The "Get Feedback" button often doesn't register the updated text, but can be updated by clicking anywhere on the screen.
 
 If these steps are completed correctly, you should get an alert saying "Connected" followed by the version number.
 
