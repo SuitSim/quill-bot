@@ -1,4 +1,4 @@
-alert("Connected v0.0.3");
+alert("Connected v0.0.4");
 
 if (!window.originalFetch) {
   window.originalFetch = fetch;
@@ -10,9 +10,12 @@ function insertAnswer(answer) {
   if (!answer || !answer.length) return;
 
   const input = document.getElementsByClassName("connect-text-area")[0];
-  input.focus();
-
-  setTimeout(() => input.textContent = answer, 100);
+  if (input) {
+    input.focus();
+    setTimeout(() => input.textContent = answer, 100);
+  } else {
+    console.log("Input element not found");
+  }
 }
 
 window.fetch = async (...args) => {
@@ -35,7 +38,6 @@ window.fetch = async (...args) => {
   jsonData.every((data) => {
     if (data.optimal) {
       const text = data.text;
-
       insertAnswer(text);
 
       return false;
